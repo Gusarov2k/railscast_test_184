@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sumptoms
+  resources :problems
   resources :animals
   resources :categories
   # The priority is based upon order of creation: first created -> highest priority.

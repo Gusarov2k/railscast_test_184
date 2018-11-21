@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @sumptom.animal_id %>
+</p>
+
+<p>
+  <strong>Problem:</strong>
+  <%= @sumptom.problem_id %>
+</p>
+
+<%= link_to 'Edit', edit_sumptom_path(@sumptom) %> |
+<%= link_to 'Back', sumptoms_path %>

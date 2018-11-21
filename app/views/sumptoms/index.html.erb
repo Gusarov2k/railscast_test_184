@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sumptoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Animal</th>
+      <th>Problem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sumptoms.each do |sumptom| %>
+      <tr>
+        <td><%= sumptom.animal_id %></td>
+        <td><%= sumptom.problem_id %></td>
+        <td><%= link_to 'Show', sumptom %></td>
+        <td><%= link_to 'Edit', edit_sumptom_path(sumptom) %></td>
+        <td><%= link_to 'Destroy', sumptom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sumptom', new_sumptom_path %>
