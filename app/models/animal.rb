@@ -3,4 +3,6 @@ class Animal < ActiveRecord::Base
 
   has_many  :sumptoms
   has_many  :problems, through: :sumptoms
+
+  accepts_nested_attributes_for :problems
 end
